@@ -29,10 +29,15 @@ header {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 1024px;
   text-align: center;
   background: purple url("http://www.tokkoro.com/picsup/2989481-programming-code-simple-background-coding___mixed-wallpapers.jpg") no-repeat center;
   background-size: cover;
+}
+
+@media screen and (max-height: 798px) {
+  header {
+    height: 730px;
+  }
 }
 
 header > p.title {
@@ -56,12 +61,24 @@ header > p.subtitle {
   font-family: 'Rubik', sans-serif;
 }
 
+@media screen and (max-height: 798px) {
+  #container {
+    margin-top: 700px;
+  }
+}
+
 #container > section > h2 {
-  margin-top: 4%;
+  margin-top: 3%;
   color: rgba(6, 5, 8, 0.62);
   text-align: center;
   font-weight: bolder;
   font-size: 3rem;
+  overflow: hidden;
+  margin-bottom: 3%;
+}
+
+section {
+  margin-top: 4%;
 }
 
 .projects {
@@ -78,6 +95,12 @@ header > p.subtitle {
   transition: 0.3s;
   margin-bottom: 5%;
   width: 60%;
+}
+
+@media screen and (max-height: 798px) {
+  .card {
+    height: 250px;
+  }
 }
 
 .card:hover {
@@ -97,6 +120,14 @@ header > p.subtitle {
   height: 220px;
 }
 
+@media screen and (max-height: 798px) {
+  .card > a > img {
+    height: 120px;
+    width: 70%;
+    padding-left: 14%;
+  }
+}
+
 .card > a > div.container {
   display: flex;
   justify-content: center;
@@ -109,6 +140,7 @@ header > p.subtitle {
 }
 
 .about {
+  height: 430px;
   margin-top: 1%;
   display: flex;
   background-color: #111111;
@@ -120,14 +152,55 @@ header > p.subtitle {
   padding-right: 2%;
 }
 
-.about > img {
+.about > .foto {
   border-radius: 50%;
+  display: none;
   margin-right: 7%;
   box-shadow: rgba(248, 248, 248, 0.8) 1px 0px 6px -3px;
 }
 
+@media screen and (max-height: 798px) {
+  .about > .foto {
+    width: 400px;
+    height: 400px;
+  }
+}
+
 .about > .textabout {
-  color: white;
+  color: #310668;
+  display: none;
+  padding: 2%;
+  background: white;
+  text-shadow: rgba(0, 0, 0, 0.3);
+  border-radius: 9px;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+.about > .textabout > h3, .about > .textabout h2, .about > .textabout h5 {
+  text-align: center;
+}
+
+@media screen and (max-height: 798px) {
+  .about > .textabout {
+    height: 48%;
+  }
+}
+
+.about > div > div {
+  display: flex;
+  padding-top: 6%;
+  padding-left: 11%;
+}
+
+.about > div > div > a > .iconos {
+  margin-right: 100px;
+  display: none;
+  width: 90px;
+  height: 90px;
+}
+
+.about > div > div > a > .iconos:first-child {
+  margin-left: 10%;
 }
 
 .barras {
