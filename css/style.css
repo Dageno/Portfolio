@@ -119,6 +119,7 @@ section {
 
 .card > a > img {
   height: 220px;
+  padding-left: 8%;
 }
 
 @media screen and (max-height: 798px) {
@@ -156,6 +157,8 @@ section {
 .about > .foto {
   border-radius: 50%;
   display: none;
+  width: 400px;
+  height: 400px;
   margin-right: 7%;
   box-shadow: rgba(248, 248, 248, 0.8) 1px 0px 6px -3px;
 }
