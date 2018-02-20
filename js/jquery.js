@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-    firstScroll = false;
+    let firstScroll = false;
+    let barScroll = false;
 
     function isScrolledIntoView(elem)
     {
@@ -12,14 +13,15 @@ $(document).ready(function () {
     
         return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
     }
-
+    
     $(window).on('scroll', function() {
-        if (isScrolledIntoView('.skillbars') && !firstScroll) {
+        if (isScrolledIntoView('.skillbars') && !barScroll) {
             $('.barra').each(function () {
                 $(this).find('.barra-progress').animate({
                     width: $(this).attr('data-percent')
                 }, 5000);
             });
+            barScroll = true;
             
         }else if (isScrolledIntoView('.about') && !firstScroll) {
             $('.foto').delay(1000).show("medium");
@@ -27,8 +29,9 @@ $(document).ready(function () {
             $('.iconos').each(function () {
                 $(this).delay(3000).fadeIn("slow");
             });
-            
+            firstScroll = true;
         }
+        
       });
    
 });

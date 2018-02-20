@@ -22,7 +22,6 @@ header {
   position: fixed;
   color: white;
   width: 100%;
-  height: 990px;
   z-index: 1;
   top: -10px;
   display: flex;
@@ -168,11 +167,9 @@ section {
 }
 
 .about > .textabout {
-  color: #310668;
+  color: #ececec;
   display: none;
   padding: 2%;
-  height: 190px;
-  background: white;
   text-shadow: rgba(0, 0, 0, 0.3);
   border-radius: 9px;
   box-shadow: inset 0 0 10px #000000;
@@ -194,15 +191,18 @@ section {
   padding-left: 11%;
 }
 
-.about > div > div > a > .iconos {
+.about > div > div > a {
   margin-right: 100px;
+}
+
+.about > div > div > a:first-child {
+  margin-left: 6.7%;
+}
+
+.about > div > div > a > .iconos {
   display: none;
   width: 90px;
   height: 90px;
-}
-
-.about > div > div > a > .iconos:first-child {
-  margin-left: 10%;
 }
 
 .barras {
@@ -261,4 +261,73 @@ section {
   line-height: 35px;
   color: #ffffff;
   color: rgba(0, 0, 0, 0.4);
+}
+
+.footer {
+  height: 370px;
+  margin-top: 1%;
+  display: flex;
+  background-color: #111111;
+  margin-left: -1.07%;
+  margin-right: -1.07%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 98.2%;
+  display: inline-flex;
+}
+
+.footer > .contacto {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  text-align: center;
+  width: 40%;
+  border: none;
+  padding-right: 10%;
+  border-right: 2px solid rgba(248, 248, 248, 0.8);
+}
+
+.footer > footer {
+  margin-top: 9%;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+textarea {
+  padding: 2%;
+  overflow: auto;
+  resize: none;
+  width: 400px;
+  height: 150px;
+  font-size: 1rem;
+}
+
+input[type=text] {
+  border: none;
+  width: 400px;
+  padding: 2%;
+  margin-bottom: 4%;
+}
+
+input[type=text]:first-child {
+  margin-top: 9%;
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: rgba(248, 248, 248, 0.8) 0px 0px 4px -1px;
+}
+
+input[type=button] {
+  background-color: #1069AB;
+  border: none;
+  color: white;
+  width: 200px;
+  font-weight: bold;
+  padding: 12px 19px;
+  text-decoration: none;
+  margin: 12px 2px;
+  cursor: pointer;
 }
