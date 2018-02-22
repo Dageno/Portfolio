@@ -438,7 +438,9 @@ section {
   padding-right: 2%;
   width: 100%;
   display: flex;
-  flex-flow: wrap;
+  @media screen and (max-height: 650px){
+    flex-flow: wrap;
+  }
 }
 
 @media screen and (max-width: 390px) {
